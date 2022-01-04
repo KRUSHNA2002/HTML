@@ -1,0 +1,45 @@
+
+<html>
+
+    <head>
+        <style type="text/css">
+            .blinking {
+                animation: blinkingText 1s infinite;
+                font-family: futura;
+                font-style: italic;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                color: red;
+                font-size: 45px;
+              
+            }
+            
+            @keyframes blinkingText {
+                from {
+                    opacity: 1;
+                    color : red;
+                    }
+                to {
+                    opacity: 0;
+                    color : white;
+                    }
+                0% {
+                    opacity: 100;
+                }
+                50% {
+                    opacity: .5;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+    
+        <body>
+    
+            <span class="blinking">Blinking the text</span>
+    
+        </body>
+    
+    </html>
