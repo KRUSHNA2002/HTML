@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+.floating {
+  font-family: Inconsolata; 
+  margin: 200px auto auto auto; 
+  width: 600px;
+  height: 550px;
+  border:3px solid black;
+  font-size: 20px;
+  transform: rotateX(0deg) rotateY(0deg);
+  padding: 1.75rem 1.75rem ;
+}
+.input{
+width:48%;
+height:8%;
+}
+.in{
+width:98%;
+height:8%;
+}
+.pwd{
+
+width:45%;
+height:8%;
+font-size:20px;
+}
+.button {
+    float: right;
+    width: 20%;
+    margin-right: 0px;
+    font-size: 12px; 
+    height:8%;
+    overflow:auto;
+	background-color:#1E90FF;
+	color:white;
+} 
+.img {
+width:5%;
+height:3%;
+}
+</style>
+<head>
+</head>
+<body>
+
+<div class="floating">
+
+<img src="E:\krushna waghumbare assignment html\ASSIGNMENT4\assignment5\set c\googlelogo.jpg" style="width:150px;height:40px;"/>
+<br><br>
+<input type="text" placeholder="First Name"class="input"> <input type="text" placeholder="Last Name"class="input">
+<br><br><input type="text" placeholder="Username" class="in"><br> You can use letters, numbers, &amp periods
+<br><br>
+<a href="">Use my current email address instead</a><br>
+<input type="password" class="pwd" placeholder="Password" id="pwd"> <input type="password"class="pwd" placeholder="Confirm"id="pass">
+<img src="E:\krushna waghumbare assignment html\ASSIGNMENT4\assignment5\set c\showpwd.png" onclick="password()" class="img"/>
+<br><br>Use 8 or more characters with a mix of letters,numbers &amp symbols<br><br><br><br><br>
+<a href="">Sign instead</a>
+<input type="submit" value="Next" class="button"onclick="next()">
+</div>
+</body>
+<script>
+function password() {
+  var x = document.getElementById("pwd");
+  var y=document.getElementById("pass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+  if (y.type === "password") {
+    y.type = "text";
+  } else {
+    y.type = "password";
+  }
+}
+function next()
+{
+ var x = document.getElementById("pwd").value;
+  var y=document.getElementById("pass").value;
+if(x==y)
+{ 
+ alert("correct");
+}
+else
+{
+alert("incorect password");
+}
+}
+</script>
+</html>
